@@ -26,6 +26,8 @@ apply plugin: 'com.gorylenko.gradle-git-properties'
 apply plugin: 'io.swagger.core.v3.swagger-gradle-plugin'
 apply plugin: 'com.google.cloud.tools.jib'
 
+version="1.0.0"
+
 check.dependsOn('cucumber')
 
 compileJava.doLast {
