@@ -19,6 +19,18 @@
 # You can replace and test a more recent version of docker compose
 version: '3.7'
 services:
+  mifosx-web-app:
+    image: openmf/web-app:latest
+    ports:
+      - '4200:80'
+    environment:
+      - FINERACT_API_URLS=https://dev.mifos.io,https://demo.mifos.io,https://qa.mifos.io,https://staging.mifos.io,https://mobile.mifos.io,https://demo.fineract.dev,https://localhost:8443
+      - FINERACT_API_URL=https://ec2-43-204-220-104.ap-south-1.compute.amazonaws.com:8443
+      - FINERACT_API_PROVIDER=/fineract-provider/api
+      - FINERACT_API_VERSION=/v1
+      - FINERACT_PLATFORM_TENANT_IDENTIFIER=default
+      - MIFOS_DEFAULT_LANGUAGE=en-US
+      - MIFOS_SUPPORTED_LANGUAGES=en-US,fr-FR
   # Backend service
   fineractmysql:
     image: mariadb:10.11
