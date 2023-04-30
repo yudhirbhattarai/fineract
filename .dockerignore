@@ -1,5 +1,4 @@
 # NB No ASF ASL header here due to FINERACT-1195
-**/build/*
 **/.gradle/*
 **/bin/*
 
